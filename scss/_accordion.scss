@@ -1,0 +1,28 @@
+.accordion {
+    &__toggler{
+        display: block;
+        padding: 15px 65px;
+        background-color: #f7f7f7;
+        @include text($text-color, $text-font, 2.6rem, 400, 1.2);
+        text-decoration: none;
+        position: relative;
+        &:after{
+            content: url(../img/arrow.svg);
+            @include posCenter;
+            left: auto;
+            right: 30px;
+            @include tr();
+        }
+        &.active:after {
+            transform: translate(-50%, -50%) rotateX(180deg);
+        }
+    }
+
+    &__collapse{
+        border: 1px solid #f7f7f7;
+        padding: 30px 65px;
+        @include text($text-color, $text-font, 1.8rem, 400, 1.3);
+    }
+
+
+}
